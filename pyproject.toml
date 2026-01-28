@@ -16,5 +16,10 @@ dependencies = [
     "aiofiles>=23.2.0",
 ]
 
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["vision_mcp_server*"]
+exclude = ["test_images*"]
+
 [project.scripts]
 vision-mcp-server = "vision_mcp_server.server:main"
